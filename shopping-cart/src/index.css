@@ -1,0 +1,152 @@
+/* General Typography and Colors */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+h1 {
+  font-size: 2rem;
+  color: #f0c040;
+}
+h2 {
+  font-size: 1.2rem;
+  color: #404040;
+}
+h3 {
+  font-size: 1rem;
+  color: #606060;
+}
+a {
+  text-decoration: none;
+}
+
+/* Flexbox Layout */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.row.center {
+  align-items: center;
+}
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+
+/* Blocks and Containers */
+.block {
+  background-color: #e0e0e0;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dcdcdc;
+}
+.cart-summary {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #404040 solid;
+  background-color: #f0c040;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+button.add {
+  background-color: #40c0f0;
+  width: 1.5rem;
+}
+button.remove {
+  background-color: #f04040;
+  width: 1.5rem;
+}
+button.badge {
+  background-color: #f04040;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #ffd700; /* Brighter yellow */
+}
+button.add:hover {
+  background-color: #32b9e8; /* Brighter blue */
+}
+button.remove:hover {
+  background-color: #d93030; /* Brighter red */
+}
+button:focus {
+  outline: 2px dashed #f0c040;
+  outline-offset: 2px;
+}
+button:active {
+  animation: button-click 0.2s;
+}
+
+/* Animations */
+@keyframes button-click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Images */
+img.small {
+  max-height: 8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  img.small {
+    max-height: 6rem;
+  }
+  button {
+    font-size: 0.7rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* CSS Variables for Theme Customization */
+:root {
+  --primary-color: #f0c040;
+  --secondary-color: #404040;
+  --accent-color: #40c0f0;
+  --background-color: #e0e0e0;
+  --text-color: #333333;
+}
